@@ -1,0 +1,27 @@
+{
+  "name": "logger-slack",
+  "version": "1.0.0",
+  "description": "logger for slack",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "keywords": [
+    "logger",
+    "slack",
+    "awesome"
+  ],
+  "author": "Matthew Mueller",
+  "license": "MIT",
+  "devDependencies": {
+    "envobj": "1.0.2",
+    "sutra": "2.0.1"
+  },
+  "dependencies": {
+    "send-to-slack": "1.0.1",
+    "through2": "2.0.1"
+  }
+}
