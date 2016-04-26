@@ -23,15 +23,9 @@ module.exports = Slack
 function Slack (url, options) {
   let send = Send(url)(options)
 
-  return through(function (chunk, enc, fn) {
+  return through.obj(function (chunk, enc, fn) {
+    send.apply(null, format(chunk))
     fn(null, chunk)
-
-    let lines = chunk.length ? chunk.toString().split('\n') : ['']
-    for (let i = 0, line; line = lines[i]; i++) {
-      if ((lines[i].length === 0) && (i == lines.length - 1)) break
-      let log = JSON.parse(line)
-      send.apply(null, format(log))
-    }
   })
 }
 
@@ -63,7 +57,7 @@ function level_to_emoji (level) {
     case 'fatal': return ':skull_and_crossbones:'
     case 'error': return ':x:'
     case 'warning': return ':warning:'
-    case 'info': return ':pushpin:'
+    case 'info': return ':bulb:'
     case 'debug': return ':mag_right:'
     case 'trace': return ':waving_white_flag:'
   }

@@ -25,5 +25,9 @@ log.pipe(Slack(env.SLACK_URL, {
   username: 'Jackops'
 }))
 
-log.info('hi there!', { team: 'martha stewart' })
-log.error(new Error('wtf!'))
+let i = 0
+log.info(i++)
+setInterval(function() {
+  console.log('logging', i)
+  log.info(i++)
+}, 60000)
