@@ -26,8 +26,8 @@ log.pipe(Slack(env.SLACK_URL, {
 }))
 
 let i = 0
-log.info(i++)
+log.warn(String(i++))
 setInterval(function() {
   console.log('logging', i)
-  log.info(i++)
+  log.warn(String(i++))
 }, 60000)

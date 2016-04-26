@@ -18,7 +18,7 @@
   "license": "MIT",
   "devDependencies": {
     "envobj": "1.0.2",
-    "sutra": "2.0.1"
+    "sutra": "2.0.2"
   },
   "dependencies": {
     "send-to-slack": "1.0.1",

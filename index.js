@@ -56,7 +56,7 @@ function level_to_emoji (level) {
   switch (level) {
     case 'fatal': return ':skull_and_crossbones:'
     case 'error': return ':x:'
-    case 'warning': return ':warning:'
+    case 'warn': return ':warning:'
     case 'info': return ':bulb:'
     case 'debug': return ':mag_right:'
     case 'trace': return ':waving_white_flag:'
