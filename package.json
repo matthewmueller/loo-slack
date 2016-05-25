@@ -1,7 +1,7 @@
 {
-  "name": "@mnm/logger-slack",
+  "name": "loo-slack",
   "version": "1.0.2",
-  "description": "logger for slack",
+  "description": "log to slack with loo",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -10,6 +10,7 @@
     "test": "make test"
   },
   "keywords": [
+    "loo",
     "logger",
     "slack",
     "awesome"
@@ -17,10 +18,10 @@
   "author": "Matthew Mueller",
   "license": "MIT",
   "devDependencies": {
-    "envobj": "1.0.2",
-    "sutra": "2.0.2"
+    "envobj": "1.0.2"
   },
   "dependencies": {
+    "loo": "3.0.0",
     "send-to-slack": "1.0.1",
     "through2": "2.0.1"
   }

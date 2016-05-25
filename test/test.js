@@ -5,7 +5,7 @@
  */
 
 let environment = require('envobj')
-let log = require('sutra')('slack:logger')
+let log = require('loo')('slack:logger')
 let Slack = require('..')
 
 /**
@@ -28,6 +28,5 @@ log.pipe(Slack(env.SLACK_URL, {
 let i = 0
 log.warn(String(i++))
 setInterval(function() {
-  console.log('logging', i)
-  log.warn(String(i++))
-}, 60000)
+  log.warn(i++)
+}, 1000)
